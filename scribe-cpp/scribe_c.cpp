@@ -16,8 +16,6 @@ using namespace apache::thrift::transport;
 using namespace scribe::thrift;
 using namespace scribe;
 
-using namespace boost;
-
 int 
 scribe_open(scribe_t *p, const char *host, const int port)
 {
