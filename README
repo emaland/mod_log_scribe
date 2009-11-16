@@ -25,7 +25,7 @@ Install mod_log_scribe.so in your Apache modules directory
 
 To use, in httpd.conf:
     LoadModule log_scribe_module /path/to/mod_log_scribe.so
-    CustomLog scribe:httpd@localhost:1463 */
+    CustomLog scribe:httpd@localhost:1463 common
 
 Will log all messages to scribe on localhost, running on port 1463, with 
 category 'httpd'
