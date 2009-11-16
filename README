@@ -1,0 +1,36 @@
+Simple Apache CustomLog module for logging directly to Scribe
+
+DEPENDENCIES -
+
+thrift
+fb303 (in thrift/contrib)
+APR (Apache Portable Runtime)
+
+BUILDING -
+
+build thrift
+build fb303
+modify scribe-cpp/Makefile as necessary
+modify build.sh as necessary
+
+run 'make' in scribe-cpp
+run 'build.sh'
+
+USING -
+
+Install mod_log_scribe.so in your Apache modules directory
+
+To use, in httpd.conf:
+    LoadModule log_scribe_module /path/to/mod_log_scribe.so
+    CustomLog scribe:httpd@localhost:1463 */
+
+Will log all messages to scribe on localhost, running on port 1463, with 
+category 'httpd'
+
+BUGS -
+
+Many.  None of the options provided currently work, or if they do they are 
+untested.
+
+Eric Maland <eric@twitter.com>
+November 16, 2009
