@@ -8,10 +8,13 @@ APR (Apache Portable Runtime)
 
 BUILDING -
 
-build thrift
-build fb303
+build/install thrift
+build/install fb303
+
 modify scribe-cpp/Makefile as necessary
 modify build.sh as necessary
+
+in scribe-cpp, run 'sh scribe.thrift'
 
 run 'make' in scribe-cpp
 run 'build.sh'
@@ -32,5 +35,5 @@ BUGS -
 Many.  None of the options provided currently work, or if they do they are 
 untested.
 
-Eric Maland <eric@twitter.com>
+Eric Maland
 November 16, 2009
